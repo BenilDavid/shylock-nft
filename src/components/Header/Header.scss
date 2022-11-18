@@ -12,7 +12,7 @@
 }
 
 button.fancy {
-  -webkit-appearance: button;
+  // -webkit-appearance: button;
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 0;
@@ -20,7 +20,7 @@ button.fancy {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  float: right;
+  // float: right;
   font-weight: 700;
   letter-spacing: .05em;
   margin: 0;
@@ -50,7 +50,7 @@ button.fancy {
     -webkit-transition: background 0.3s linear, width 0.3s linear;
     transition: background 0.3s linear, width 0.3s linear;
 }
-  a {
+  .connect-btn {
     font-size: 1em;
     line-height: 1.33333em;
     padding-left: 2em;
@@ -104,7 +104,7 @@ button.fancy {
     background: white;
     }
     
-    a {
+    .connect-btn {
     color: white;
     padding-left: 1.5em;
    }

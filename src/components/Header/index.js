@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
 
 const Header = () => {
@@ -23,10 +23,11 @@ const Header = () => {
           <div class="center">
               <button onClick={handleConnectWallet} class="fancy">
                   <span class="top-key"></span>
-                  <a class="">Connect wallet</a>
+                  <span class="connect-btn">Connect wallet</span>
                   <span class="bottom-key-1"></span>
                   <span class="bottom-key-2"></span>
               </button>
+              {metaKey}
           </div>
     </div>
   )
