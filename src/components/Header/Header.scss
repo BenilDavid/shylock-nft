@@ -4,6 +4,7 @@
     position: fixed;
     background-color: transparent;
     color: #fff;
+    z-index: 999;
 }
 
 .logo{
@@ -33,7 +34,7 @@ button.fancy {
   text-transform: none;
   transition: all .3s ease-in-out;
   user-select: none;
-  width: 18rem;
+  width: fit-content;
   
 &::before {
     content: " ";

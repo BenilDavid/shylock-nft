@@ -18,17 +18,17 @@ const Header = () => {
 
   return (
     <div className='header-container d-flex justify-content-between align-items-center'>
-        <div className='logo'>Logo</div>
+        <div className='logo'>SHYLOCK</div>
         {/* <div>Connect wallet</div> */}
           <div class="center">
               <button onClick={handleConnectWallet} class="fancy">
                   <span class="top-key"></span>
-                  <span class="connect-btn">Connect wallet</span>
+                  <span class="connect-btn">{metaKey ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5) : "Connect wallet"}</span>
                   <span class="bottom-key-1"></span>
                   <span class="bottom-key-2"></span>
               </button>
-              {metaKey}
           </div>
+              {/* {metaKey} */}
     </div>
   )
 }
