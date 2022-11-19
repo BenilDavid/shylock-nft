@@ -7,8 +7,8 @@ const MainPage = () => {
     <div>
           <div className='image-container'>
             {/* smoke effect */}
-        <img className='cigratte-smoke' src={smoke} />
-        <img className='cigratte-smoke' src={smoke} />
+        <img className='cigratte-smoke' alt='smoke' src={smoke} />
+        <img className='cigratte-smoke' alt='smoke' src={smoke} />
         {/* <img className='cigratte-smoke' src={smoke} /> */}
         <div class='firepit'>
           <div class='fire'>
