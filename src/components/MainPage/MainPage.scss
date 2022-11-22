@@ -1,63 +1,71 @@
- .image-container{
+.main-container {
+
   position: relative;
-    width: 100vw;
-height: 100vh;
-    background: center / 100% url('../../assets/Images/shylock-main.jpeg') no-repeat;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: top / 100% url("../../assets/Images/shylock-bg.jpg") no-repeat;
+  // background: top / 100% url('./assets/Images/shylock-bg.jpg') no-repeat;
 
-    .cigratte-smoke{
-      position: absolute;
-      top: 27%;
-  left: 80%;
-   width: 70px;
-  height: 100px;
-opacity: 0;
-  // smoke effect
+  .cigratte-smoke {
+    position: absolute;
+    top: 42%;
+    left: 80%;
+    width: 70px;
+    height: 100px;
+    opacity: 0;
+    // smoke effect
+    filter: blur(5px);
+    transform-origin: 50% 50%;
+    animation: smoke1 10s linear infinite;
+    animation-delay: 1s;
+
+    &:nth-of-type(2n) {
+      animation-name: smoke1;
+      animation-duration: 10s;
+      animation-delay: 5s;
+    }
+  }
+
+  .enter-btn{
+    position: absolute;
+    top: 44%;
+    right: 50%;
+  }
+}
+
+@keyframes smoke1 {
+  0% {
     filter: blur(1px);
-    filter: invert(100%);
-      transform-origin: 50% 50%;
-      animation: smoke1 10s linear infinite;
-      animation-delay: 1s;
-       &:nth-of-type(2n) {
-    animation-name: smoke1;
-    animation-duration: 10s;
-    animation-delay: 5s;
+    transform: translateY(-30px) scale(-1, 1.05);
+    opacity: 0.8;
   }
-  // &:nth-of-type(3n) {
-  //   animation-duration: 12.5s;
-  //   animation-delay: 10s;
-  // }
-    }
+  25% {
+    filter: blur(2px);
+    transform: translateY(-60px) scale(-1.2, 1.1);
+    opacity: 0.8;
   }
+  50% {
+    filter: blur(3px);
+    transform: translateY(-90px) scale(-1.5, 1.1);
+    opacity: 0.6;
+  }
+  75% {
+    filter: blur(4px);
+    transform: translateY(-120px) scale(-1.7, 1.15);
+    opacity: 0.5;
+  }
+  100% {
+    filter: blur(5px);
+    transform: translateY(-150px) scale(-1.9, 1.2);
+    opacity: 0.3;
+  }
+}
 
-  @keyframes smoke1 {
-    0% {
-      filter: blur(1px);
-      transform: translateY(-30px) scale(-1, 1.05);
-      opacity: 0.8;
-    }
-    25% {
-      filter: blur(2px);
-      transform: translateY(-60px) scale(-1.2, 1.1);
-      opacity: 0.8;
-    }
-    50% {
-      filter: blur(3px);
-      transform: translateY(-90px) scale(-1.5, 1.1);
-      opacity: 0.6;
-    }
-    75% {
-      filter: blur(4px);
-      transform: translateY(-120px) scale(-1.7, 1.15);
-      opacity: 0.5;
-    }
-    100% {
-      filter: blur(5px);
-      transform: translateY(-150px) scale(-1.9, 1.2);
-      opacity: 0.3;
-    }
-  }
-  // flame effect
-  
+// flame effect
+
 $orange: rgb(255, 106, 0);
 $red: rgb(255, 34, 0);
 $yellow: rgb(255, 200, 0);
@@ -81,14 +89,14 @@ $blue: rgb(0, 55, 255);
   left: 15%;
   width: 3px;
   height: 3px;
-  background-color: fade-out($orange,.3);
+  background-color: fade-out($orange, 0.3);
   opacity: 0;
   animation-name: fly-up-burnout-1;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-delay: .4s;
-  
+  animation-delay: 0.4s;
+
   &:nth-of-type(2n) {
     animation-name: fly-up-burnout-2;
     animation-duration: 8.4s;
@@ -120,17 +128,17 @@ $blue: rgb(0, 55, 255);
     transform: translate(0, 0);
     opacity: 1;
   }
-  
-  33%{
+
+  33% {
     transform: translate(12px, -70px);
     opacity: 0.8;
   }
-  
+
   66% {
     transform: translate(0, -140px);
-    opacity: .6;
+    opacity: 0.6;
   }
-  
+
   100% {
     transform: translate(6px, -200px);
     opacity: 0;
@@ -142,16 +150,16 @@ $blue: rgb(0, 55, 255);
     transform: translate(0, 0);
     opacity: 1;
   }
-  
-  50%{
+
+  50% {
     transform: translate(-10px, -80px);
   }
-  
+
   80% {
     transform: translate(-4px, -140px);
-    opacity: .6;
+    opacity: 0.6;
   }
-  
+
   100% {
     transform: translate(-6px, -160px);
     opacity: 0;

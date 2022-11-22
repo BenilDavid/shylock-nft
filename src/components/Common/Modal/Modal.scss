@@ -1,0 +1,22 @@
+.modal-content{
+  padding: 20px 10px;
+background-color: rgba(46, 46, 46, 0.8) !important;
+  .modal_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 1rem;
+  b {
+    color: #fff;
+    font-size: 24px;
+  }
+  i {
+    color: #002449;
+    font-size: 22px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+}
+
+}

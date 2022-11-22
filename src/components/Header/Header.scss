@@ -7,10 +7,20 @@
     z-index: 999;
 }
 
-.logo{
-     font-size: 1.4em;
-     text-transform: uppercase;
+.shylock-logo{
+     width: 200px;
+     height: 80px;
 }
+
+// button container
+.btn-container{
+  display: grid;
+  width: 100%;
+  align-items: center;
+  // justify-content: center;
+}
+
+// connect button
 
 button.fancy {
   // -webkit-appearance: button;

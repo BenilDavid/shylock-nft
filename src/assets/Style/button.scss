@@ -1,0 +1,32 @@
+.connect-wallet-btn, .connect-twitter-btn{
+    position: relative;
+    background-color: #fff;
+    text-align: left;
+    margin: 10px 5px;
+    display: block;
+    padding: 10px 20px;
+    width: 80%;
+    border: 1px solid #6e6e6e;
+    border-radius: 20px;
+    outline: none;
+}
+
+// .connect-wallet-btn::before{
+//     content: '';
+//     width: 30px;
+// height: 30px;
+// position: absolute;
+// top: 0;
+// right: 0;
+// display: inline-block;
+//     background: url('../Images/MetaMask.png') no-repeat -30px -50px fixed;
+// }
+// .connect-twitter-btn::before{
+//     content: '';
+//     height: 30px;
+// position: absolute;
+// top: 0;
+// right: 0;
+// display: inline-block;
+//     background-image: url('../Images/twitter.png');
+// }
