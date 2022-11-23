@@ -17,7 +17,7 @@ const Modal = ({
       {headTitle !== "" && (
         <div className="modal_head">
           <b className="text-center">{headTitle}</b>
-          {closeIcon && <img className="cursor-pointer" src={close} alt="close" onClick={toggle}></img>}
+          {closeIcon && <img className="cursor-pointer close-btn" src={close} alt="close" onClick={toggle}></img>}
         </div>
       )}
       <ModalBody className={className}>

@@ -25,12 +25,12 @@ const Header = ({ isOpen, toggle }) => {
         <div className='header-container d-flex justify-content-between align-items-center'>
             <img className='shylock-logo' src={ShylockLogo} alt="shylock-logo" />
 
-            <div class="center">
-                <button onClick={toggle} class="fancy">
-                    <span class="top-key"></span>
-                    <span class="connect-btn">{metaKey ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5) : "Connect"}</span>
-                    <span class="bottom-key-1"></span>
-                    <span class="bottom-key-2"></span>
+            <div className="center">
+                <button onClick={toggle} className="fancy">
+                    <span className="top-key"></span>
+                    <span className="connect-btn">{metaKey ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5) : "Connect"}</span>
+                    <span className="bottom-key-1"></span>
+                    <span className="bottom-key-2"></span>
                 </button>
             </div>
             <Modal
