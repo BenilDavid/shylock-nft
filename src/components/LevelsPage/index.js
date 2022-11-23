@@ -39,23 +39,23 @@ const LevelsPage = () => {
             <ul className='case-list'>
               <li className='unlocked'>
                 <span>Suicide</span>
-                <img className='unlocked-icon' src={PlayIcon} alt="locked-image" />
+                <img className='unlocked-icon' src={PlayIcon} alt="unlocked" />
               </li>
               <li className='locked'>
                 <span>Homicide</span>
-                <img className='locked-icon' src={LockedIcon} alt="locked-image" />
+                <img className='locked-icon' src={LockedIcon} alt="locked" />
               </li>
               <li className='locked'>
                 <span>Robbery</span>
-                <img className='locked-icon' src={LockedIcon} alt="locked-image" />
+                <img className='locked-icon' src={LockedIcon} alt="locked" />
               </li>
               <li className='locked'>
                 <span>Narcotics</span>
-                <img className='locked-icon' src={LockedIcon} alt="locked-image" />
+                <img className='locked-icon' src={LockedIcon} alt="locked" />
               </li>
               <li className='locked'>
                 <span>Godfather</span>
-                <img className='locked-icon' src={LockedIcon} alt="locked-image" />
+                <img className='locked-icon' src={LockedIcon} alt="locked" />
               </li>
             </ul>
           </div>
