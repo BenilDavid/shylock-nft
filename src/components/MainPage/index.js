@@ -6,7 +6,7 @@ import Header from '../Header';
 import GunImage from '../../assets/Images/homePage/gun.png';
 import ashTrayImage from '../../assets/Images/homePage/ashtray.png';
 import catImage from '../../assets/Images/homePage/cat.png';
-import computerImage from '../../assets/Images/homePage/computer.png';
+import computerImage from '../../assets/Images/homePage/computer-nopass.png';
 import newspaperImage from '../../assets/Images/homePage/newspapr.png';
 import telephoneImage from '../../assets/Images/homePage/telephone.png';
 
