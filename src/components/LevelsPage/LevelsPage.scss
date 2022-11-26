@@ -21,17 +21,23 @@
     height: fit-content;
     background-color: rgba(48, 67, 73, 0.8);
     border-radius: 10px;
-
+.case-list-heading{
+   font-size: 2.2em;
+    letter-spacing: 1px;
+}
     .case-list {
       text-align: left;
       margin-right: 2rem;
       li {
+           font-size: 1.4em;
+    letter-spacing: 1px;
         list-style: none;
         margin: 3px 0;
         padding: 10px 10px;
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         &:hover {
           background-color: rgba(57, 74, 80, 0.8);
         }

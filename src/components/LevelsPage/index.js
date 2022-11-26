@@ -35,9 +35,9 @@ const LevelsPage = () => {
         </div>
         <div className='levels-container'>
           <div className='case-list-container'>
-            <h3 className='my-4'>Coldcase Vault</h3>
+            <h3 className='case-list-heading mb-4'>Coldcase Vault</h3>
             <ul className='case-list'>
-              <li className='unlocked'>
+              <li className='unlocked' onClick={() => navigate("/prison")}>
                 <span>Suicide</span>
                 <img className='unlocked-icon' src={PlayIcon} alt="unlocked" />
               </li>

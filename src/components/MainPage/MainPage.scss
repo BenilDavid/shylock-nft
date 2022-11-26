@@ -1,16 +1,82 @@
 .main-container {
 
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: 1;
-  background: top / 100% url("../../assets/Images/shylock-bg.jpg") no-repeat;
+  background: top / 100% url("../../assets/Images/homePage/shylock-main.svg") no-repeat;
   // background: top / 100% url('./assets/Images/shylock-bg.jpg') no-repeat;
-
-  .cigratte-smoke {
+overflow: hidden;
+  
+@media (max-width: 768px) {
+  background: url("../../assets/Images/homePage/shylock-main.svg") no-repeat;
+  background-size: cover;
+}
+  .gun{
+    cursor: pointer;
+    z-index: 2;
+    width: 200px;
+    height: 150px;
     position: absolute;
+    top: 65%;
+    left: 58%;
+  }
+
+  .newspaper{
+    cursor: pointer;
+    z-index: 2;
+    width: 250px;
+    height: 180px;
+    position: absolute;
+    bottom: 1%;
+    left: 24%;
+  }
+  .ash-tray{
+    cursor: pointer;
+    z-index: 2;
+    width: 170px;
+    height: 161px;
+    position: absolute;
+    bottom: -0.1%;
+    right: 32.5%;
+    &:hover{
+      transform: rotate(10deg);
+    }
+  }
+  .cat{
+    cursor: pointer;
+    z-index: 2;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 75%;
+    left: 40%;
+  }
+  .computer{
+    cursor: pointer;
+    z-index: 2;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 25%;
+    left: 34%;
+  }
+  .telephone{
+    cursor: pointer;
+    z-index: 2;
+    width: 240px;
+    height: 160px;
+    position: absolute;
+    top: 57%;
+    left: 11%;
+  }
+
+
+  
+  .cigratte-smoke {
+    position: fixed;
     top: 42%;
     left: 80%;
     width: 70px;
@@ -30,6 +96,9 @@
   }
 
   .enter-btn{
+    z-index: 3;
+    font-size: 1.2em;
+    padding: 0px 10px;
     position: absolute;
     top: 44%;
     right: 50%;
