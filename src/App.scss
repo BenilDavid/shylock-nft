@@ -1,6 +1,7 @@
+$bg-color: #0e0d0f;
 .App {
   text-align: center;
-  background-color: #474747;
+  background-color: $bg-color;
 
   @media (max-width: 700px) {
   }

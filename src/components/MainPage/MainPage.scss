@@ -1,85 +1,141 @@
+
+@mixin highlight($highlight-color:  rgb(230, 42, 42)) {
+  -webkit-filter: drop-shadow(2px 1px 0 $highlight-color)
+      drop-shadow(-1px -1px 0 $highlight-color);
+  filter: drop-shadow(2px 1px 0 $highlight-color) 
+  drop-shadow(-1px -1px 0 $highlight-color);
+  transform: rotate(2deg);
+}
+
 .main-container {
 
   position: relative;
   width: 100%;
   height: 100vh;
+overflow: hidden;
+//  background-size: cover;
+// @media (max-width: 768px) {
+//   background: url("../../assets/Images/homePage/shylock-main.svg") no-repeat;
+//   background-size: cover;
+// }
+
+.shylock-bg-image{
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-  background: top / 100% url("../../assets/Images/homePage/shylock-main.svg") no-repeat;
-  // background: top / 100% url('./assets/Images/shylock-bg.jpg') no-repeat;
-overflow: hidden;
-  
-@media (max-width: 768px) {
-  background: url("../../assets/Images/homePage/shylock-main.svg") no-repeat;
-  background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+// computer
+.computer-container{
+  position: absolute;
+  top: 8%;
+  left: 20%;
+  .computer{
+    z-index: 2;
+    width: 350px;
+    height: 268px;
+    position: relative;
+  } 
+  .keyboard{
+    z-index: 2;
+    width: 350px;
+    height: 80px;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+  }
+  .enter-btn{
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #d2d2d2;
+    z-index: 11;
+    font-size: 0.6rem;
+    padding: 0px 12px;
+    position: absolute;
+    top: 40%;
+    right:43%;
+  }
+}
+.zoom {
+  z-index: 100 !important;
+  transition: transform 3s;
+  -ms-transform: scale(10); /* IE 9 */
+  -webkit-transform: scale(10); /* Safari 3-10 */
+  transform: scale(10) translate(30px, 20px); 
 }
   .gun{
     cursor: pointer;
     z-index: 2;
-    width: 200px;
-    height: 150px;
+    width: 130px;
+    height: 80px;
     position: absolute;
-    top: 65%;
-    left: 58%;
+    top: 57%;
+    right: 43%;
+
+    &:hover{
+   @include highlight;
+    }
   }
 
   .newspaper{
     cursor: pointer;
     z-index: 2;
-    width: 280px;
-    height: 170px;
+    width: 220px;
+    height: 130px;
     position: absolute;
-    bottom: 1%;
-    left: 20%;
+    bottom: 16%;
+    left: 10%;
+    &:hover{
+      @include highlight;
+       }
   }
   .ash-tray{
     cursor: pointer;
     z-index: 2;
-    width: 170px;
-    height: 161px;
+    width: 110px;
+    height: 94px;
     position: absolute;
-    bottom: -0.1%;
-    right: 32.5%;
+    bottom: 16%;
+    right: 49%;
     &:hover{
-      transform: rotate(10deg);
-    }
+      @include highlight;
+       }
   }
   .cat{
     cursor: pointer;
     z-index: 2;
-    width: 270px;
-    height: 300px;
+    width: 240px;
+    height: 270px;
     position: absolute;
-    bottom: 1%;
-    left: 40%;
+    bottom: 13%;
+    left: 28%;
+    &:hover{
+      @include highlight;
+       }
   }
-  .computer{
-    cursor: pointer;
-    z-index: 2;
-    width: 400px;
-    height: 380px;
-    position: absolute;
-    top: 18%;
-    left: 32%;
-  }
+
   .telephone{
     cursor: pointer;
     z-index: 2;
     width: 240px;
     height: 200px;
     position: absolute;
-    top: 52%;
-    left: 11%;
+    top: 38%;
+    left: -3%;
+    &:hover{
+      @include highlight;
+       }
   }
 
 
-  
+  // smoke effect
   .cigratte-smoke {
-    position: fixed;
-    top: 42%;
-    left: 80%;
-    width: 70px;
+    position: absolute;
+    top: 32%;
+    right: 20%;
+    width: 60px;
     height: 100px;
     opacity: 0;
     // smoke effect
@@ -93,15 +149,6 @@ overflow: hidden;
       animation-duration: 10s;
       animation-delay: 5s;
     }
-  }
-
-  .enter-btn{
-    z-index: 3;
-    font-size: 1.2em;
-    padding: 0px 10px;
-    position: absolute;
-    top: 41%;
-    right: 50%;
   }
 }
 
@@ -142,22 +189,21 @@ $blue: rgb(0, 55, 255);
 
 .firepit {
   position: absolute;
-  top: 30%;
-  left: 81%;
-  // background-image: url("../../assets/Images/smoke.png");
+  top: 36%;
+  right: 21%;
 }
 .fire {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 20px;
+  height: 40px;
 }
 
 .spark {
   position: absolute;
   bottom: 46%;
   left: 15%;
-  width: 3px;
-  height: 3px;
+  width: 2px;
+  height: 2px;
   background-color: fade-out($orange, 0.3);
   opacity: 0;
   animation-name: fly-up-burnout-1;
