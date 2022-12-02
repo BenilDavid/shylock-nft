@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./PrisonGatePage.scss";
 import { useNavigate } from "react-router-dom";
-import BackArrow from "../../assets/Images/back-arrow.png";
+import Typewriter from 'typewriter-effect';
 
 const PrisonGatePage = () => {
   let navigate = useNavigate();
 
+
   const [speechCount, setspeechCount] = useState(1);
+
+  useEffect(() => {
+
+  }, [])
 
   const handleNext = () => {
     setspeechCount(speechCount + 1);
@@ -19,8 +24,7 @@ const PrisonGatePage = () => {
     <div className="prison-gate-main">
       <div className="d-flex">
         <button className="back-btn" onClick={() => navigate("/levels")}>
-          <img className="back-icon me-2" src={BackArrow} alt="back" />
-          Go Back
+          Back
         </button>
       </div>
 
@@ -28,45 +32,69 @@ const PrisonGatePage = () => {
         <>
           <div className="dialog-1 animate__animated animate__bounceInRight">
             <div className="left-point"></div>
-            <span>
-              1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              harum optio distinctio! Provident ratione aspernatur atque nisi
-              velit debitis excepturi!
-              <span className="ms-2 text-decoration-underline cursor-pointer" onClick={handleNext}>next</span>
-            </span>
+            <div>
+
+              <Typewriter
+                options={{
+                  strings: ['1. Lorem ipsum dolor sit amet consectetur adipisicing elit.'],
+                  autoStart: speechCount === 1 ? true : false,
+                  loop: true,
+                  delay: 40,
+                  pauseFor: 100000,
+                }}
+              />
+
+              <span className="ms-2 text-decoration-underline cursor-pointer text-white" onClick={handleNext}>next</span>
+            </div>
           </div>
         </>
       ) : speechCount === 2 ? (
         <>
-        <div className="dialog-2 animate__animated animate__bounceInLeft">
-        <div className="right-point"></div>
-        <span>
-          2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima harum
-          optio distinctio! Provident ratione aspernatur atque nisi velit
-          debitis excepturi!
-          <span className="ms-2 me-2 text-decoration-underline cursor-pointer" onClick={handleBack}>back</span>
-          <span className="ms-2 text-decoration-underline cursor-pointer" onClick={handleNext}>next</span>
-        </span>
-      </div>
+          <div className="dialog-2 animate__animated animate__bounceInLeft">
+            <div className="right-point"></div>
+            <div>
+
+              <Typewriter
+                options={{
+                  strings: ['2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.'],
+                  autoStart: speechCount === 2 ? true : false,
+                  loop: true,
+                  delay: 40,
+                  pauseFor: 100000,
+                }}
+              />
+
+              <span className="ms-2 me-2 text-decoration-underline cursor-pointer text-white" onClick={handleBack}>back</span>
+              <span className="ms-2 text-decoration-underline cursor-pointer text-white" onClick={handleNext}>next</span>
+            </div>
+          </div>
         </>
       ) : speechCount === 3 ? (
         <>
-         <div className="dialog-1 animate__animated animate__bounceInRight">
+          <div className="dialog-1 animate__animated animate__bounceInRight">
             <div className="left-point"></div>
-            <span>
-              3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              harum optio distinctio! Provident ratione aspernatur atque nisi
-              velit debitis excepturi!
-              <span className="ms-2 me-2 text-decoration-underline cursor-pointer" onClick={handleBack}>back</span>
-              <span className="ms-2 text-decoration-underline cursor-pointer" onClick={() => navigate("/prison")}>Go in</span>
-            </span>
+            <div>
+
+              <Typewriter
+                options={{
+                  strings: ['3. Lorem ipsum dolor sit amet consectetur adipisicing elit. amet consectetur adipisicing elit.'],
+                  autoStart: speechCount === 3 ? true : false,
+                  loop: true,
+                  delay: 40,
+                  pauseFor: 100000,
+                }}
+              />
+
+              <span className="ms-2 me-2 text-decoration-underline cursor-pointer text-white" onClick={handleBack}>back</span>
+              <span className="ms-2 text-decoration-underline cursor-pointer text-white" onClick={() => navigate("/prison")}>Go in</span>
+            </div>
           </div>
         </>
       ) : (
         ""
       )}
 
-      
+
     </div>
   );
 };

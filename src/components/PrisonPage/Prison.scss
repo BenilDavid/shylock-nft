@@ -1,16 +1,18 @@
 .prison-main{
+    padding: 0 20px;
+    padding-top: 5rem;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background: center / 100% url(../../assets/Images/prisonPage/clean-prison.jpg)
+    no-repeat;
+    // background-size: cover;
 
-    .prison-bg-image{
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .bed{
-position: absolute;
-top: 0;
-left: 0;
-    }
+    // .prison-bg-image{
+    //     z-index: 1;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    // }
 }

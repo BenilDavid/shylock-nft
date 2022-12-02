@@ -8,7 +8,7 @@ import MetamaskLogo from "../../assets/Images/MetaMask.png";
 import TwitterLogo from "../../assets/Images/twitter.png";
 
 const Header = ({ isOpen, toggle }) => {
-    const { user, isAuthenticated, loginWithRedirect } = useAuth0();
+    const { user, loginWithRedirect, logout } = useAuth0();
 
     const [metaKey, setMetaKey] = useState("");
 
@@ -25,21 +25,16 @@ const Header = ({ isOpen, toggle }) => {
     };
 
     return (
-        <div className="header-container d-flex justify-content-between align-items-center">
-            <img className="shylock-logo" src={ShylockLogo} alt="shylock-logo" />
-
-            <div className="center">
-                <button onClick={toggle} className="fancy">
-                    <span className="top-key"></span>
-                    <span className="connect-btn">
+        <div className="header-container">
+           <div className=" d-flex justify-content-between align-items-center">
+           <img className="shylock-logo" src={ShylockLogo} alt="shylock-logo" />
+                <button onClick={toggle} className="enter-btn">
                         {metaKey
                             ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5)
                             : "Connect"}
-                    </span>
-                    <span className="bottom-key-1"></span>
-                    <span className="bottom-key-2"></span>
                 </button>
-            </div>
+           </div>
+
             <Modal
                 isOpen={isOpen}
                 toggle={toggle}
@@ -69,15 +64,14 @@ const Header = ({ isOpen, toggle }) => {
                                         </svg>
                                     </div>
                                 </>}
-
                         </button>
 
                         <button
                             className="connect-twitter-btn"
-                            onClick={() => loginWithRedirect()}
+                            onClick={!user ? () => loginWithRedirect() : () => logout({ returnTo: window.location.origin })}
                         >
                             <img className="btn-logo" src={TwitterLogo} alt="twitter logo" />
-                            Log in with twitter
+                            {!user ? "Log in with twitter" : "Log Out"}
                             {user ?
                                 <>
                                     <div className="correct-circle">
@@ -97,13 +91,7 @@ const Header = ({ isOpen, toggle }) => {
                                     </div>
                                 </>}
                         </button>
-                        {console.log(user)}
-                        {console.log(isAuthenticated)}
                     </div>
-
-
-
-
                 </div>
             </Modal>
         </div>

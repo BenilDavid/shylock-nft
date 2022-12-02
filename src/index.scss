@@ -1,19 +1,40 @@
 @import './assets/Style/button.scss';
 
-@font-face {
-    font-family: jasmine;
-    src: url('./assets/fonts/jasmineUPC/JasmineUPCBold.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import './assets/Style/colors.scss';
+// @font-face {
+//     font-family: jasmine;
+//     src: url('./assets/fonts/jasmineUPC/JasmineUPCBold.ttf');
+// }
+
 
 body {
   margin: 0;
-  font-family: Chomsky, sans-serif !important;
+  font-size: 62.5%;
+  font-family: 'IBM Plex Mono', monospace !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+ color: $text-orange-color;
+  background-image: radial-gradient(#1f0b00, black 100%);
+  &::before{
+    bottom: 0;
+    content: " ";
+    display: block;
+    left: 0;
+    pointer-events: none;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(hsla(0,6%,7%,0) 50%,rgba(0,0,0,.25) 0),linear-gradient(90deg,rgba(255,0,0,.06),rgba(0,255,0,.02),rgba(0,0,255,.06));
+    background-size: 100% 2px,3px 100%;
+    position: fixed;
+  }
 }
 
 code {
-  font-family: Chomsky, sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .btn-logo{

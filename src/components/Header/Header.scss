@@ -1,6 +1,7 @@
 .header-container{
-    padding: 20px 20px;
+    padding: 0 20px;
     width: 100%;
+    height: 5rem;
     position: fixed;
     background-color: transparent;
     color: #fff;
@@ -8,8 +9,8 @@
 }
 
 .shylock-logo{
-     width: 200px;
-     height: 100px;
+     width: 160px;
+     height: 80px;
 }
 
 // button container
@@ -40,119 +41,4 @@
     height: 30px;
     }
   }
-}
-
-// connect button
-
-button.fancy {
-  // -webkit-appearance: button;
-  background-color: transparent;
-  border: 2px solid #fff;
-  border-radius: 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  // float: right;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 0em 1em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  transition: all .3s ease-in-out;
-  user-select: none;
-  width: fit-content;
-  
-&::before {
-    content: " ";
-    width: 1.5625rem;
-    height: 2px;
-    background: #929292;
-    top: 50%;
-    left: 1.5em;
-    position: absolute;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    -webkit-transition: background 0.3s linear, width 0.3s linear;
-    transition: background 0.3s linear, width 0.3s linear;
-}
-  .connect-btn {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    // line-height: 1.33333em;
-    padding: 0.2em 0em 0.2em 2em;
-    // padding-left: 2em;
-    display: block;
-    text-align: left;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-    color: #929292;
-}
-   
-.top-key {
-    height: 2px;
-    width: 1.5625rem;
-    top: -2px;
-    left: 0.625rem;
-    position: absolute;
-    background: #222;
-    -webkit-transition: width 0.5s ease-out, left 0.3s ease-out;
-    transition: width 0.5s ease-out, left 0.3s ease-out;
-}
-  
-  .bottom-key-1 {
-    height: 2px;
-    width: 1.5625rem;
-    right: 1.875rem;
-    bottom: -2px;
-    position: absolute;
-    background: #222;
-    -webkit-transition: width 0.5s ease-out, right 0.3s ease-out;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-}
-  .bottom-key-2 {
-    height: 2px;
-    width: 0.625rem;
-    right: 0.625rem;
-    bottom: -2px;
-    position: absolute;
-    background: #222;
-    -webkit-transition: width 0.5s ease-out, right 0.3s ease-out;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-}
-  
-    &:hover {
-    color: white;
-    background: transparent;
-    
-    &::before {
-    width: 0.9375rem;
-    background: white;
-    }
-    
-    .connect-btn {
-    color: white;
-    padding-left: 1.5em;
-   }
-    
-    .top-key {
-    left: -2px;
-    width: 0px;
-}
-    .bottom-key-1 ,
-    .bottom-key-2 {
-    right: 0;
-    width: 0;
-  }
-   
-}
-
 }

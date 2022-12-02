@@ -1,32 +1,45 @@
+@import "../../assets/Style/colors.scss";
+
+@mixin dialog {
+  text-align: left;
+  z-index: 100;
+  margin: 20px 20px;
+  padding: 20px 30px;
+  height: 25%;
+  width: 75%;
+  background-image: radial-gradient(#1f0b00, black 80%);
+  border-radius: 10px;
+  color: $text-orange-color;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@mixin dialog-pointer {
+  z-index: 12;
+  width: 0;
+  height: 0;
+  border-left: 2vh solid transparent;
+  border-right: 2vh solid transparent;
+  border-top: 10vh solid rgba($color: black, $alpha: 1);
+}
+
 .prison-gate-main {
-  padding: 30px 40px;
-  width: 100vw;
-  height: 100vh;
-  background: center / 100% url(../../assets/Images/prison-bg.svg) no-repeat;
-//   speech box
+  padding: 0 40px;
+  padding-top: 5rem;
+  width: 100%;
+  height: 100%;
+  background: center / 100% url(../../assets/Images/prison-gate-bg.webp)
+    no-repeat;
+
+  //   speech box
   .dialog-1 {
-    text-align: left;
-    z-index: 100;
-    margin: 20px 20px;
-    padding: 20px 30px;
-    height: 20%;
-    width: 75%;
-    background-color: rgba($color: #3d3d3d, $alpha: 1);
+    @include dialog();
     position: absolute;
     bottom: 0;
     right: 0;
-    border-radius: 10px;
-color: #fff;
-font-size: 22px;
-font-weight: 500;
 
     .left-point {
-      z-index: 12;
-      width: 0;
-      height: 0;
-      border-left: 2vh solid transparent;
-      border-right: 2vh solid transparent;
-      border-top: 10vh solid rgba($color: #3d3d3d, $alpha: 1);
+      @include dialog-pointer();
       position: absolute;
       top: 0;
       left: -2%;
@@ -34,28 +47,13 @@ font-weight: 500;
     }
   }
   .dialog-2 {
-    text-align: left;
-    z-index: 100;
-    margin: 20px 20px;
-    padding: 20px 30px;
-    height: 20%;
-    width: 75%;
-    background-color: rgba($color: #3d3d3d, $alpha: 1);
+    @include dialog();
     position: absolute;
     bottom: 0;
     left: 0;
-    border-radius: 10px;
-color: #fff;
-font-size: 22px;
-font-weight: 500;
 
     .right-point {
-      z-index: 12;
-      width: 0;
-      height: 0;
-      border-left: 2vh solid transparent;
-      border-right: 2vh solid transparent;
-      border-top: 10vh solid rgba($color: #3d3d3d, $alpha: 1);
+      @include dialog-pointer();
       position: absolute;
       top: 0;
       right: -2%;

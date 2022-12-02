@@ -1,26 +1,41 @@
+@import '../../assets/Style/colors.scss';
+
+
 .connect-wallet-btn, .connect-twitter-btn{
     position: relative;
-    background-color: #fff;
+    background-color: transparent;
+    color: $text-orange-color;
     text-align: left;
     margin: 10px 5px;
     display: block;
     padding: 10px 20px;
-    width: 80%;
-    border: 1px solid #6e6e6e;
+    width: 100%;
+    border: 1px solid $text-orange-color;
     border-radius: 20px;
     outline: none;
 }
 
 .back-btn{
-    font-size: 1em;
+    font-size: 1rem;
     letter-spacing: 1px;
     background-color: transparent;
-    color: #fff;
+    color: $text-orange-color;
      margin: 10px 5px;
     display: block;
     padding: 5px 20px;
     width: fit-content;
-    border: 2px solid #6e6e6e;
+    border: 2px solid $text-orange-color;
     border-radius: 10px;
     outline: none;
 }
+
+.enter-btn {
+    background-color: transparent;
+    cursor: pointer;
+    color: $text-orange-color;
+    outline: none;
+    border: 1px solid $text-orange-color;
+    z-index: 11;
+    font-size: 1.2rem;
+    padding: 0px 12px;
+  }
