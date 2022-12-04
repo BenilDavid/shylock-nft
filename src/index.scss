@@ -17,7 +17,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
  color: $text-orange-color;
-  background-image: radial-gradient(#1f0b00, black 100%);
+//  background-image: linear-gradient(to top, #1f0b00, #1a0803, #140504, #0c0203, #000000);
+//  background-image: radial-gradient(circle, #3f1e2a, #5e3139, #7e4746, #9c6051, #b77b5b, #bb805c, #be865d, #c18b5e, #b17955, #a0674c, #8e5643, #7c463a);
+// background-image: linear-gradient(to right, #d5a46a, #b77b5b, #92574d, #69383d, #3f1e2a);
+//  filter: brightness(0.6);
+  // background-image: radial-gradient( #1f0b00, black 100%);
+  background: #1f0b00;
+background: -webkit-linear-gradient(0deg, #1f0b00 0%, #000000 100%);
+background: linear-gradient(0deg, #1f0b00 0%, #000000 100%);
+  // background-color: #222 !important;
   &::before{
     bottom: 0;
     content: " ";
@@ -28,7 +36,7 @@ body {
     top: 0;
     z-index: 2;
     background: linear-gradient(hsla(0,6%,7%,0) 50%,rgba(0,0,0,.25) 0),linear-gradient(90deg,rgba(255,0,0,.06),rgba(0,255,0,.02),rgba(0,0,255,.06));
-    background-size: 100% 2px,3px 100%;
+    background-size: 100% 4px,1px 100%;
     position: fixed;
   }
 }

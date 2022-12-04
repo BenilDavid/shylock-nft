@@ -2,15 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./PrisonGatePage.scss";
 import { useNavigate } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
+import ReactPlayer from 'react-player';
+import bgAudio from '../../assets/Audio/bg-audio.mp3';
+import speechAudio from '../../assets/Audio/speech.mp3';
+import PrisonGateBgImage from '../../assets/Images/prison-gate-bg.webp';
 
 const PrisonGatePage = () => {
   let navigate = useNavigate();
 
 
   const [speechCount, setspeechCount] = useState(1);
+  const [bgAudioPlay, setbgAudioPlay] = useState(false);
 
   useEffect(() => {
-
+    setbgAudioPlay(true);
   }, [])
 
   const handleNext = () => {
@@ -22,12 +27,15 @@ const PrisonGatePage = () => {
 
   return (
     <div className="prison-gate-main">
+      <img className="prison-gate-bg-image" src={PrisonGateBgImage} alt="prison gate" />
+      <ReactPlayer className="d-none" url={bgAudio} playing={bgAudioPlay} controls={false} volume={1} muted={false} loop={true} />
+      <ReactPlayer className="d-none" url={speechAudio} playing={bgAudioPlay} controls={false} volume={1} muted={false} />
+
       <div className="d-flex">
         <button className="back-btn" onClick={() => navigate("/levels")}>
           Back
         </button>
       </div>
-
       {speechCount === 1 ? (
         <>
           <div className="dialog-1 animate__animated animate__bounceInRight">

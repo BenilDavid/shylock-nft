@@ -6,8 +6,11 @@ import Modal from "../Common/Modal";
 import ShylockLogo from "../../assets/Images/shylock-logo.png";
 import MetamaskLogo from "../../assets/Images/MetaMask.png";
 import TwitterLogo from "../../assets/Images/twitter.png";
+// import { useNavigate } from "react-router-dom";
 
 const Header = ({ isOpen, toggle }) => {
+    // const navigate = useNavigate();
+
     const { user, loginWithRedirect, logout } = useAuth0();
 
     const [metaKey, setMetaKey] = useState("");
@@ -26,14 +29,15 @@ const Header = ({ isOpen, toggle }) => {
 
     return (
         <div className="header-container">
-           <div className=" d-flex justify-content-between align-items-center">
-           <img className="shylock-logo" src={ShylockLogo} alt="shylock-logo" />
-                <button onClick={toggle} className="enter-btn">
-                        {metaKey
-                            ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5)
-                            : "Connect"}
+            <div className=" d-flex justify-content-between align-items-center">
+                <img className="shylock-logo cursor-pointer" src={ShylockLogo} alt="shylock-logo" />
+                {/* <div class="glitch" data-glitch="glitch">glitch</div> */}
+                <button onClick={toggle} className="enter-btn glitch distortText" data-glitch="glitch">
+                    {metaKey
+                        ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5)
+                        : "Connect"}
                 </button>
-           </div>
+            </div>
 
             <Modal
                 isOpen={isOpen}

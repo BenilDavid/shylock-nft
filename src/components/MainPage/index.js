@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./MainPage.scss";
 import { useNavigate } from "react-router-dom";
-// import shylockBg from "../../assets/Images/homePage/main-bg.jpg";
+// import shylockBg from "../../assets/Images/homePage/bg-main.jpeg";
 
 const MainPage = () => {
   let navigate = useNavigate();

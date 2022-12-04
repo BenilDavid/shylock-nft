@@ -1,5 +1,8 @@
 @import '../../assets/Style/colors.scss';
 
+@mixin distortText {
+    text-shadow: 0.4389924193300864px 0 1px rgb(0 30 255 / 50%), -0.4389924193300864px 0 1px rgb(255 0 80 / 30%), 0 0 3px;
+ }
 
 .connect-wallet-btn, .connect-twitter-btn{
     position: relative;
@@ -15,21 +18,20 @@
     outline: none;
 }
 
+
 .back-btn{
-    font-size: 1rem;
-    letter-spacing: 1px;
     background-color: transparent;
+    cursor: pointer;
     color: $text-orange-color;
-     margin: 10px 5px;
-    display: block;
-    padding: 5px 20px;
-    width: fit-content;
-    border: 2px solid $text-orange-color;
-    border-radius: 10px;
     outline: none;
+    border: 1px solid $text-orange-color;
+    z-index: 11;
+    font-size: 1.2rem;
+    padding: 0px 12px;
 }
 
 .enter-btn {
+    @include distortText();
     background-color: transparent;
     cursor: pointer;
     color: $text-orange-color;

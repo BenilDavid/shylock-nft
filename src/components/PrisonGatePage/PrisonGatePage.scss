@@ -5,7 +5,8 @@
   z-index: 100;
   margin: 20px 20px;
   padding: 20px 30px;
-  height: 25%;
+  min-height: 10rem;
+  height: max-content;
   width: 75%;
   background-image: radial-gradient(#1f0b00, black 80%);
   border-radius: 10px;
@@ -24,13 +25,25 @@
 }
 
 .prison-gate-main {
-  padding: 0 40px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: 0 20px;
   padding-top: 5rem;
   width: 100%;
   height: 100%;
-  background: center / 100% url(../../assets/Images/prison-gate-bg.webp)
-    no-repeat;
+  // background: center / 100% url(../../assets/Images/prison-gate-bg.webp)
+  //   no-repeat;
 
+    .prison-gate-bg-image{
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+  
   //   speech box
   .dialog-1 {
     @include dialog();
