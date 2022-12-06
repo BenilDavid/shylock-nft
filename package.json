@@ -15,6 +15,7 @@
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "react-tooltip": "^4.5.1",
     "reactstrap": "^9.1.5",
     "sass": "^1.56.1",
     "typewriter-effect": "^2.19.0",

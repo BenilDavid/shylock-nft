@@ -3,13 +3,13 @@ import "./Header.scss";
 import "./validation.scss";
 import { useAuth0 } from "@auth0/auth0-react";
 import Modal from "../Common/Modal";
-import ShylockLogo from "../../assets/Images/shylock-logo.png";
+import ShylockLogo from "../../assets/Images/shylock-black.png";
 import MetamaskLogo from "../../assets/Images/MetaMask.png";
 import TwitterLogo from "../../assets/Images/twitter.png";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ isOpen, toggle }) => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const { user, loginWithRedirect, logout } = useAuth0();
 
@@ -30,12 +30,23 @@ const Header = ({ isOpen, toggle }) => {
     return (
         <div className="header-container">
             <div className=" d-flex justify-content-between align-items-center">
-                <img className="shylock-logo cursor-pointer" src={ShylockLogo} alt="shylock-logo" />
+                <img className="shylock-logo cursor-pointer" src={ShylockLogo} alt="shylock-logo" onClick={() => navigate("/")} />
                 {/* <div class="glitch" data-glitch="glitch">glitch</div> */}
-                <button onClick={toggle} className="enter-btn glitch distortText" data-glitch="glitch">
+                {/* <div class="glitch">
+
+                </div> */}
+                <button onClick={toggle} className="enter-btn glitch">
                     {metaKey
                         ? metaKey.slice(0, 5) + "..." + metaKey.slice(-5)
-                        : "Connect"}
+                        : <><div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div>
+                            <div class="line ms-3">Connect</div></>}
                 </button>
             </div>
 
@@ -43,7 +54,7 @@ const Header = ({ isOpen, toggle }) => {
                 isOpen={isOpen}
                 toggle={toggle}
                 size="md"
-                headTitle="LOGIN TO PREMINT"
+                headTitle="LOGIN"
             >
                 <div className="btn-container row">
                     <div className="col">

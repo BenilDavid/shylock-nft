@@ -8,7 +8,11 @@
   min-height: 10rem;
   height: max-content;
   width: 75%;
-  background-image: radial-gradient(#1f0b00, black 80%);
+  // background-image: radial-gradient(#1f0b00, black 80%);
+  background: #1f0b00;
+  background: -webkit-linear-gradient(0deg, #1f0b00 0%, #000000 100%);
+  background: linear-gradient(0deg, #1f0b00 0%, #000000 100%);
+
   border-radius: 10px;
   color: $text-orange-color;
   font-size: 1.2rem;
@@ -24,6 +28,15 @@
   border-top: 10vh solid rgba($color: black, $alpha: 1);
 }
 
+.prison-gate-bg-image{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  // left: 0;
+}
+
 .prison-gate-main {
   position: absolute;
   top: 0;
@@ -34,15 +47,6 @@
   height: 100%;
   // background: center / 100% url(../../assets/Images/prison-gate-bg.webp)
   //   no-repeat;
-
-    .prison-gate-bg-image{
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-  }
   
   //   speech box
   .dialog-1 {

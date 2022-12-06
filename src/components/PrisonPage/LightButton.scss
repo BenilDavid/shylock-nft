@@ -1,0 +1,32 @@
+$color_1: white;
+$font-family_1: Avenir, Arial, sans-serif;
+
+.red-btn {
+    opacity: 0.7;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border: none;
+	color: $color_1;
+	font-family: $font-family_1;
+	font-weight: 900;
+	font-size: 0.8rem;
+	background: red;
+	text-shadow: 0 3px 1px rgba(122,17,8,.8);
+	box-shadow: 0 8px 0 rgb(183,9,0), 0 15px 20px rgba(0,0,0,.35);
+	text-transform: uppercase;
+	transition: .1s all ease-in;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	// -webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	span {
+		position: relative;
+	}
+}
+.pressed {
+	padding-top: 3px;
+	transform: translateY(4px);
+	box-shadow: 0 4px 0 rgb(183,0,0), 0 8px 6px rgba(0,0,0,.45);
+}

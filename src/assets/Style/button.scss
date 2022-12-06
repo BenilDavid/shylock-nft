@@ -32,6 +32,7 @@
 }
 
 .enter-btn {
+   
     @include distortText();
     background-color: transparent;
     cursor: pointer;
